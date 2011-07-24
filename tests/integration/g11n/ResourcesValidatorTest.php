@@ -48,7 +48,7 @@ class ResourcesValidatorTest extends \lithium\test\Unit {
 	}
 
 	public function testDeCH() {
-		Validator::add(Catalog::read('lithium', 'validation', 'de_CH'));
+		Validator::add(Catalog::read(true, 'validation', 'de_CH'));
 
 		$this->assertTrue(Validator::isPostalCode('1234'));
 		$this->assertTrue(Validator::isPostalCode('1234'));
@@ -104,7 +104,7 @@ class ResourcesValidatorTest extends \lithium\test\Unit {
 	}
 
 	public function testFrFr() {
-		Validator::add(Catalog::read('lithium', 'validation', 'fr_FR'));
+		Validator::add(Catalog::read(true, 'validation', 'fr_FR'));
 
 		$this->assertTrue(Validator::isPostalCode('12345'));
 		$this->assertTrue(Validator::isPostalCode('01234'));
@@ -112,7 +112,7 @@ class ResourcesValidatorTest extends \lithium\test\Unit {
 	}
 
 	public function testFrCH() {
-		Validator::add(Catalog::read('lithium', 'validation', 'fr_CH'));
+		Validator::add(Catalog::read(true, 'validation', 'fr_CH'));
 
 		$this->assertTrue(Validator::isPostalCode('1234'));
 		$this->assertTrue(Validator::isPostalCode('1234'));
@@ -145,7 +145,7 @@ class ResourcesValidatorTest extends \lithium\test\Unit {
 	}
 
 	public function testItCH() {
-		Validator::add(Catalog::read('lithium', 'validation', 'it_CH'));
+		Validator::add(Catalog::read(true, 'validation', 'it_CH'));
 
 		$this->assertTrue(Validator::isPostalCode('1234'));
 		$this->assertTrue(Validator::isPostalCode('1234'));
