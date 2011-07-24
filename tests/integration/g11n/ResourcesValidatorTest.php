@@ -47,6 +47,15 @@ class ResourcesValidatorTest extends \lithium\test\Unit {
 		$this->assertFalse(Validator::isPostalCode('0123'));
 	}
 
+	public function testDeCH() {
+		Validator::add(Catalog::read('lithium', 'validation', 'de_CH'));
+
+		$this->assertTrue(Validator::isPostalCode('1234'));
+		$this->assertTrue(Validator::isPostalCode('1234'));
+		$this->assertFalse(Validator::isPostalCode('0123'));
+		$this->assertFalse(Validator::isPostalCode('12345'));
+	}
+
 	public function testDeDe() {
 		Validator::add(Catalog::read(true, 'validation', 'de_DE'));
 
@@ -94,6 +103,23 @@ class ResourcesValidatorTest extends \lithium\test\Unit {
 		$this->assertFalse(Validator::isSsn('478364120'));
 	}
 
+	public function testFrFr() {
+		Validator::add(Catalog::read('lithium', 'validation', 'fr_FR'));
+
+		$this->assertTrue(Validator::isPostalCode('12345'));
+		$this->assertTrue(Validator::isPostalCode('01234'));
+		$this->assertFalse(Validator::isPostalCode('1234'));
+	}
+
+	public function testFrCH() {
+		Validator::add(Catalog::read('lithium', 'validation', 'fr_CH'));
+
+		$this->assertTrue(Validator::isPostalCode('1234'));
+		$this->assertTrue(Validator::isPostalCode('1234'));
+		$this->assertFalse(Validator::isPostalCode('0123'));
+		$this->assertFalse(Validator::isPostalCode('12345'));
+	}
+
 	public function testFrBe() {
 		Validator::add(Catalog::read(true, 'validation', 'fr_BE'));
 
@@ -116,6 +142,15 @@ class ResourcesValidatorTest extends \lithium\test\Unit {
 
 		$this->assertTrue(Validator::isPostalCode('12345'));
 		$this->assertFalse(Validator::isPostalCode('123456'));
+	}
+
+	public function testItCH() {
+		Validator::add(Catalog::read('lithium', 'validation', 'it_CH'));
+
+		$this->assertTrue(Validator::isPostalCode('1234'));
+		$this->assertTrue(Validator::isPostalCode('1234'));
+		$this->assertFalse(Validator::isPostalCode('0123'));
+		$this->assertFalse(Validator::isPostalCode('12345'));
 	}
 
 	public function testNlBe() {
