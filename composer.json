@@ -1,7 +1,7 @@
 {
     "name": "unionofrad/li3_lldr",
     "type": "lithium-library",
-    "description": "A Lithium plugin with additional g11n resources constituting the Lithium Locale Data Repository.",
+    "description": "A li₃ plugin with additional g11n resources constituting the Lithium Locale Data Repository.",
     "keywords": ["php", "lldr", "locale", "g11n", "lithium", "li3"],
     "homepage": "http://li3.me",
     "license": "BSD-3-Clause",

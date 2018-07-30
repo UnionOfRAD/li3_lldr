@@ -1,7 +1,7 @@
 
 ### About
 
-This Lithium plugin provides additional g11n resources. These intentionally haven't been bundled with the Lithium core to allow the community to extend and add to the resources collaboratively. The specialized nature of the resources as well as the sheer size have been another reason for not shipping the data with the core.
+This li₃ plugin provides additional g11n resources. These intentionally haven't been bundled with the li₃ core to allow the community to extend and add to the resources collaboratively. The specialized nature of the resources as well as the sheer size have been another reason for not shipping the data with the core.
 
 Following resources are currently contained in this plugin:
 
